@@ -4,8 +4,8 @@ app = FastAPI()
 
 # Load model and processor once when the container starts
 
-@app.get("/")
-def health_check():
+@app.get("/ping")
+def ping():
     return {"status": "ok"}
 
 @app.post("/invocations")
