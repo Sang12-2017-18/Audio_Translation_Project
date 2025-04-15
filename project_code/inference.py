@@ -43,10 +43,11 @@ def output_fn(transcript, accept='application/json'):
     """
     Format the prediction output as specified.
     """
+    import json
     response = {'transcription': transcript}
     if accept == 'application/json':
         return Response(
-            content=response,
+            content=json.dumps(response),
             media_type=accept,
             status_code=200
         )
