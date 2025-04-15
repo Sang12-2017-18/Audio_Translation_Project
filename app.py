@@ -1,3 +1,4 @@
+import json
 from fastapi import FastAPI, UploadFile, File, Response
 from project_code.inference import input_fn, model_fn, predict_fn, output_fn
 app = FastAPI()
@@ -7,7 +8,7 @@ app = FastAPI()
 @app.get("/ping")
 def ping():
     return Response(
-        content={"status": "healthy"},
+        content=json.dumps({"status": "healthy"}),
         media_type="application/json",
         status_code=200
     )
