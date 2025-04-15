@@ -1,4 +1,4 @@
-from fastapi import FastAPI, UploadFile, File
+from fastapi import FastAPI, UploadFile, File, Response
 from project_code.inference import input_fn, model_fn, predict_fn, output_fn
 app = FastAPI()
 
@@ -6,7 +6,11 @@ app = FastAPI()
 
 @app.get("/ping")
 def ping():
-    return {"status": "ok"}
+    return Response(
+        content={"status": "healthy"},
+        media_type="application/json",
+        status_code=200
+    )
 
 @app.post("/invocations")
 async def transcribe(file: UploadFile = File(...)):

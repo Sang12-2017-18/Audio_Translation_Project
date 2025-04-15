@@ -3,6 +3,7 @@ import torch
 import io
 from transformers import pipeline, AutoModelForSpeechSeq2Seq, AutoProcessor
 from transformers.pipelines.audio_utils import ffmpeg_read
+from fastapi import Response
 
 
 def model_fn():
@@ -42,9 +43,12 @@ def output_fn(transcript, accept='application/json'):
     """
     Format the prediction output as specified.
     """
-    import json
     response = {'transcription': transcript}
     if accept == 'application/json':
-        return json.dumps(response), accept
+        return Response(
+            content=response,
+            media_type=accept,
+            status_code=200
+        )
     else:
         raise ValueError(f"Unsupported accept type: {accept}")
