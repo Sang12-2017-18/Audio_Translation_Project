@@ -28,6 +28,7 @@ def input_fn(request_body, request_content_type, sampling_rate):
         # Load the audio using librosa or another library.
         audio_data = ffmpeg_read(audio_bytes.getvalue(), sampling_rate=sampling_rate)
         return audio_data
+    return None
 
 
 def predict_fn(input_data, model_pipe):
@@ -38,6 +39,8 @@ def predict_fn(input_data, model_pipe):
         return result["text"]
     except Exception as e:
         print(f"Error during prediction: {e}. Traceback: {traceback.format_exc()}")
+        return None
+
 
 def output_fn(transcript, accept='application/json'):
     """
