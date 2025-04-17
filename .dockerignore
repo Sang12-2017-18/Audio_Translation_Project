@@ -1,0 +1,8 @@
+__pycache__/
+frontend_code/
+.save_model.py
+.request_model.py
+.sagemaker_deploy.py
+.python-version
+.DS_Store
+.readme.md
