@@ -1,0 +1,7 @@
+streamlit==1.44.1
+librosa==0.11.0
+soundfile==0.13.0
+yt-dlp==2025.2.19
+requests_toolbelt==1.0.0
+google-genai==1.11.0
+fastapi==0.115.12
