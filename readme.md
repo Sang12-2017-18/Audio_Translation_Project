@@ -45,4 +45,9 @@ Click on the image to watch the demo video of the project.
 [![Bengali ASR Demo Video](https://raw.githubusercontent.com/Sang12-2017-18/Audio_Translation_Project/main/media/asr_demo_thumbnail.jpg)](https://raw.githubusercontent.com/Sang12-2017-18/Audio_Translation_Project/main/media/Translation_live_video.mov)
 
 ## Tech Stack
-Hugging Face 🤗, Whisper, FastAPI, Docker, AWS SageMaker, AWS ECR, Streamlit, FastAPI, Librosa, yt-dlp, AWS CloudWatch,
+Hugging Face 🤗, Whisper, FastAPI, Docker, AWS SageMaker, AWS ECR, Streamlit, FastAPI, Librosa, yt-dlp, AWS CloudWatch
+
+## Future enhancements
+- Add translation for visual elements in a movie (the title slide).
+- Add more language support.
+- Add speaker diarization: Identify who are speaking in the audio.
