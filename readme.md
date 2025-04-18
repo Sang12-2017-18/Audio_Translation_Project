@@ -7,25 +7,25 @@
 - A frontend was created using Streamlit and FastAPI to interact with the model.
 - Audio processing (conversion to mono and 16kHz) was done using the `librosa` library.
 
-# Prerequisites
+## Prerequisites
 - AWS account. 
 - An IAM user with access to SageMaker (AmazonSageMakerFullAccess) and ECR (AmazonEC2ContainerRegistryPowerUser), and a role with full access to Sagemaker (AmazonSageMakerFullAccess).
 - Docker installed on your local machine.
 - Python 3.11.6 installed on your local machine.
 - AWS CLI installed on your local machine.
 
-# Python version used for the project
+## Python version used for the project
 ```bash
 $ python --version
 Python 3.11.6
 ```
 
-# Libraries used
+## Libraries used
 - project_code/requirements.txt: List libraries required for the ML model.
 - frontend_code/requirements.txt: List libraries required for the frontend.
 - project_code/torch_reqs.txt: Torch version for the model.
 
-# Getting the model to execution
+## Getting the model to execution
 - Step 1: Clone the repository, and run the save_model.py file to save the model.
 - Step 2: To deploy the aws model, create a docker image using the Dockerfile provided in the project_code directory. These steps are mentioned in detail in the aws_deploy.sh file. You can execute the file as given in the comments in the file.
 - Step 3: Once that file is executed, the model image will be created in AWS ECR. To deploy the model on sagemaker, execute the sagemaker_deploy.py file. The image_uri is the value you supply to docker push command in the aws_deploy.sh file. The sagemaker_deploy.py file will create a sagemaker endpoint for you to use.
@@ -43,5 +43,5 @@ The port for the frontend_code/api is 8001, and should be the same as the port m
 ## Demo Video
 
 
-# Tech Stack
+## Tech Stack
 Hugging Face 🤗, Whisper, FastAPI, Docker, AWS SageMaker, AWS ECR, Streamlit, FastAPI, Librosa, yt-dlp, AWS CloudWatch,
