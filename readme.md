@@ -41,6 +41,7 @@ The port for the frontend_code/api is 8001, and should be the same as the port m
 - Step 5: The frontend code will run on port 8501, and the fastapi app will run on port 8001. You can upload the audio file, or download YouTube audio, and do the transcription and translation.
 
 ## Demo Video
+Click on the image to watch the demo video of the project.
 [![Bengali ASR Demo Video](https://raw.githubusercontent.com/Sang12-2017-18/Audio_Translation_Project/main/media/asr_demo_thumbnail.jpg)](https://raw.githubusercontent.com/Sang12-2017-18/Audio_Translation_Project/main/media/Translation_live_video.mov)
 
 ## Tech Stack
